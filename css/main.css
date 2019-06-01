@@ -151,21 +151,21 @@ body.open-menu .main-nav {
     transform: translate(0, 0);
 }
 
-.main-nav-bar li {
+.main-nav-bar > li {
     width: 100%;
     text-align: center;
 }
 
-.main-nav-bar li:hover {
+.main-nav-bar > li:hover {
     color: #58c93a;
     box-shadow: -1px 0 0 #1d1d1d, inset 0 -6px 0 #58c93a;
 }
 
-.main-nav-bar li:hover a {
+.main-nav-bar > li:hover a {
     color: #58c93a;
 }
 
-.main-nav-bar li a {
+.main-nav-bar > li a {
     padding: 2.5rem 0;
 }
 
@@ -218,19 +218,19 @@ body.open-menu .sidebarBtn {
     transform: translate(0, 0);
   }
 
-.dropdown-content p {
+  .dropdown-content > li {
       color: #ffffff;
-      font-size: 0.8rem;
   }
 
-.dropdown-content p:hover {
+.dropdown-content > li:hover {
       color: #58c93a;
   }
 
 /* Main Posts */
 .posts-container {
     padding-top: 3rem;
-    margin: 0 6rem;
+    margin: 0 2rem;
+    min-width: 300px;
     border: 1px solid #e1e0e0;
 }
 
@@ -247,6 +247,7 @@ body.open-menu .sidebarBtn {
 .post-image {
     margin: 20px;
     object-fit: cover;
+    max-height: 25vh;
 }
 
 .post-text h2 {
@@ -423,22 +424,27 @@ li:hover .dribbble-link {
     top: 0;
     left: 0;
     background-color: rgba(153, 153, 153, 0.32);
-    /* display: none; */
     cursor: pointer;
 }
 
 /* Modal */
+.modalScreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(153, 153, 153, 0.32);
+}
+
 .modal {
     background-color: rgba(41, 41, 41, 0.95);
     text-align: center;
     border: 1px solid #58c93a;
     flex-direction: column;
     position: fixed;
-    top: 0;
-    right: 0;
     width: 100%;
     height: 100%;
-    padding: 40% 5%;
     z-index: 1;
     font-size: 3rem;
     color: white;
@@ -473,6 +479,10 @@ li:hover .dribbble-link {
     }
     
     .posts-container {
+        margin: 0 6rem;
+    }
+
+    .posts-container {
         min-width: 450px;
     }
 
@@ -496,7 +506,7 @@ li:hover .dribbble-link {
         padding-top: 0;
     }
 
-    .main-nav-bar li {
+    .main-nav-bar > li {
         border-width: 0 0.02rem;
         border-color: #1d1d1d;
         height: 100%;
@@ -510,8 +520,6 @@ li:hover .dribbble-link {
     }
 
     .modal {
-        top: 13.5%;
-        right: 13.5%;
         width: 75%;
         height: 50%;
         border-radius: 30px;
@@ -520,7 +528,15 @@ li:hover .dribbble-link {
     .dropdown-content {
         top: auto;
         right: auto;
+        color: #ffffff;
+    }
 
+    .dropdown-content > li {
+        white-space: nowrap;
+    }
+
+    .dropdown-content > li:hover {
+        color: #58c93a;
     }
 
     .dropdownLink:hover .dropdown-content {
@@ -530,8 +546,7 @@ li:hover .dribbble-link {
     .sec-nav li a {
         color: #818181;
         font-size: 1.2rem;
-    }
-    
+    }   
 }
 
 @media (min-width: 840px) {
@@ -547,7 +562,7 @@ li:hover .dribbble-link {
     }
     
     .post-image {
-        width: 30vw;
+        width: 40vw;
         max-height: 100%;
         object-fit: cover;
         margin: 0;

@@ -17,12 +17,12 @@
                 <li>
                     <div class="dropdownLink">
                         <a href="javascript:onOpenDropdown();"><span class="first-letter">j</span>ournal</a>
-                        <div class="dropdown-content hide">
-                            <p>October 2016</p>
-                            <p>January 2017</p>
-                            <p>April 2017</p>
-                            <p>July 2017</p>
-                        </div>
+                        <ul class="dropdown-content clean-list hide">
+                            <li>October 2016</li>
+                            <li>January 2017</li>
+                            <li>April 2017</li>
+                            <li>July 2017</li>
+                        </ul>
                     </div>
                 </li>
                 <li><a href=""><span class="first-letter">a</span>bout</a></li>
@@ -76,14 +76,16 @@
         </nav>
     </main>
 
-    <section class="modal hide flex align-center">
-        <button class="menu-btn closeBtn" onclick="onCloseModal()">X</button>
-        <p>Join us to get access to the latest stories!</p>
-        <input type="email" placeholder="insert your email here"/>
-        <button class="menu-btn submitBtn" onclick="onCloseModal()">Submit</button>
-
+    <section class="modalScreen flex align-center justify-center hide">
+        <section class="modal flex align-center">
+            <button class="menu-btn closeBtn" onclick="onCloseModal()">X</button>
+            <p>Join us to get access to the latest stories!</p>
+            <input type="email" placeholder="insert your email here"/>
+            <button class="menu-btn submitBtn" onclick="onCloseModal()">Submit</button>
+    
+        </section>
     </section>
-
+    
     <footer class="footer flex align-center space-between">
         <div class="logo"><span class="fisrt-logo-letter">b</span>login<span class="last-logo-char">.</span></div>
         <div class="copyrights"><span class="spaced">© 2014 B</span>login.com  -  All Rights Reserved  -  Find more free Templates at <span class="bold">Pixelhint.com</span></div>
@@ -108,23 +110,22 @@
             document.body.classList.toggle('open-menu');
             document.querySelector('.screen').classList.toggle('hide');
             document.querySelector('.main-nav').classList.remove('hide');
+            document.querySelector('.dropdown-content').classList.add('hide');
             var elBtn = document.querySelector('.menu-btn');
             (elBtn.innerText === '☰')? elBtn.innerText = 'X' : elBtn.innerText = '☰';
         }
 
         function onOpenModal() {
-            document.querySelector('.modal').classList.remove('hide');
-            document.querySelector('.screen').classList.toggle('hide');
+            document.querySelector('.modalScreen').classList.remove('hide');
         }
 
         function onCloseModal() {
-            document.querySelector('.modal').classList.add('hide');
-            document.querySelector('.screen').classList.toggle('hide');
+            document.querySelector('.modalScreen').classList.add('hide');
         }
 
         function onOpenDropdown() {
             if (window.innerWidth > 740) return;
-            document.querySelector('.dropdown-content').classList.toggle('hide');
+            document.querySelector('.dropdown-content').classList.remove('hide');
         }
 
     </script>
