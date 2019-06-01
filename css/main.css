@@ -105,7 +105,6 @@ button:focus {
     box-shadow: inset 0 -6px 0 #1e1e1e;
     background-color: #292929; 
     padding: 0 6rem;
-    min-width: 600px;
     height: 6rem;
 }
 
@@ -201,11 +200,11 @@ body.open-menu .sidebarBtn {
     position: relative;
   }
   
-  .dropdown-content .hide {
+.dropdown-content .hide {
     transform: translate(200%, 0);
   }
 
-  .dropdown-content {
+.dropdown-content {
     position: absolute;
     box-shadow: inset 0 -6px 0 #1e1e1e;
     background-color: #292929; 
@@ -219,12 +218,12 @@ body.open-menu .sidebarBtn {
     transform: translate(0, 0);
   }
 
-  .dropdown-content p {
+.dropdown-content p {
       color: #ffffff;
       font-size: 0.8rem;
   }
 
-  .dropdown-content p:hover {
+.dropdown-content p:hover {
       color: #58c93a;
   }
 
@@ -233,7 +232,6 @@ body.open-menu .sidebarBtn {
     padding-top: 3rem;
     margin: 0 6rem;
     border: 1px solid #e1e0e0;
-    min-width: 450px;
 }
 
 .post {
@@ -316,6 +314,7 @@ body.open-menu .sidebarBtn {
 
 .sec-nav li a {
     color: #818181;
+    font-size: 0.8rem;
 }
 
 .sec-nav li:hover a {
@@ -343,6 +342,7 @@ body.open-menu .sidebarBtn {
 /* Footer */
 .footer {
     height: 15rem;
+    text-align: center;
     flex-direction: column;
     box-shadow: inset 0 1px 0 #e1e0e0;
     background-color: #f8f8f8;
@@ -468,6 +468,14 @@ li:hover .dribbble-link {
 
 /* Media Queries */
 @media (min-width: 740px) {
+    .header {
+        min-width: 600px;
+    }
+    
+    .posts-container {
+        min-width: 450px;
+    }
+
     .main-nav {
         height: 100%;
         position: static;
@@ -518,6 +526,12 @@ li:hover .dribbble-link {
     .dropdownLink:hover .dropdown-content {
         display: block;
       }
+    
+    .sec-nav li a {
+        color: #818181;
+        font-size: 1.2rem;
+    }
+    
 }
 
 @media (min-width: 840px) {
