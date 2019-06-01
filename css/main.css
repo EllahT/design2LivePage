@@ -448,13 +448,13 @@ li:hover .dribbble-link {
     z-index: 1;
     font-size: 3rem;
     color: white;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .closeBtn {
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 1rem;
+    right: 1rem;
 }
 
 .submitBtn {
@@ -520,9 +520,10 @@ li:hover .dribbble-link {
     }
 
     .modal {
-        width: 75%;
-        height: 50%;
+        width: 50%;
+        height: min-content;
         border-radius: 30px;
+        padding: 2rem;
     }
 
     .dropdown-content {
