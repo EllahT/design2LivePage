@@ -47,7 +47,6 @@ a {
 
 p {
     margin: 0px 0px 1.875rem;
-    letter-spacing: 0.03rem;
     flex-grow: 1;
 }
 
@@ -55,12 +54,16 @@ p:nth-last-child(1) {
     margin-bottom: 2.5rem;
 }
 
+button {
+    background-color: transparent;
+}
+
 button:active {
-    outline: none 
+    outline: none;
 }
 
 button:focus {
-    outline:none 
+    outline:none;
 }
 
 /* helpers */
@@ -105,7 +108,6 @@ button:focus {
     box-shadow: inset 0 -6px 0 #1e1e1e;
     background-color: #292929; 
     padding: 0 6rem;
-    height: 6rem;
 }
 
 .logo {
@@ -167,10 +169,6 @@ body.open-menu .main-nav {
 
 .main-nav-bar > li a {
     padding: 2.5rem 0;
-}
-
-.first-letter {
-    letter-spacing: 0.05rem;
 }
 
 .menu-btn {
@@ -242,6 +240,7 @@ body.open-menu .sidebarBtn {
 .post-text {
     flex-direction: column;
     margin: 0 2.5rem;
+    align-items: flex-start;
 }
 
 .post-image {
@@ -257,44 +256,32 @@ body.open-menu .sidebarBtn {
 /* continueReadingBtn */
 
 .btn {
-    width: 11.5rem;
-    height: 2.5rem;
     line-height: 2rem;
     border: 2px solid #c2c2c2;
     color: #c2c1c1;
     border-radius: 2rem;
-    letter-spacing: 0.03rem;
     text-transform: capitalize;
     text-align: center;
-    transition: width 0.4s;
     position: relative;
-}
+    padding: 0 1.25rem;
+    cursor: pointer;
 
-.btn::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0.9rem;
-    right: 0.9rem;
-    width: 1rem;
-    height: 0.4rem;
-    background-image: url('../img/greenarrow.jpg');
-    background-repeat: no-repeat;
-    color: #58c93a;
-    opacity: 0;
-    transition: 0.3s all;
+    transition: padding 0.4s;
 }      
 
 .btn:hover {
     border-color: #58c93a;
-    width: 13.125rem;
     color: #58c93a;
-    cursor: pointer;
+    padding-right: 2.5rem;
+    
 }
 
 .btn:hover::after {
-    opacity: 1;
-    transition-delay: 0.2s;
+    content: '→';
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 0;
 }
 
 /* secendary nav */
@@ -320,10 +307,6 @@ body.open-menu .sidebarBtn {
 
 .sec-nav li:hover a {
     text-decoration: line-through;
-}
-
-.sec-nav .first-letter {
-    letter-spacing: 0.05rem;
 }
 
 .sec-nav li:nth-child(1) a {
@@ -359,15 +342,10 @@ body.open-menu .sidebarBtn {
     font-size: 0.8125rem;
 }
 
-.copyrights .spaced {
-    letter-spacing: 0.39px;
-}
-
 .copyrights .bold {
     color: #939292;
     font-family: "LatoBold";
     font-weight: 700;
-    letter-spacing: 0.39px;
 }
 
 .footer .social-networks a {
@@ -595,7 +573,6 @@ li:hover .dribbble-link {
     .header {
         max-width: 1500px;
         padding: 0 10rem;
-        height: 8.125rem;
     }
     
     .main-nav-bar li a {
